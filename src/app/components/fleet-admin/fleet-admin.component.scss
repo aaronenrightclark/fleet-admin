@@ -1,0 +1,30 @@
+.admin-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-toggles {
+  display: flex;
+  > * {
+    margin: 1rem;
+  }
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}

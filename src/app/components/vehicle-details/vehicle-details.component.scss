@@ -1,0 +1,34 @@
+.vehicle-details-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vehicle-details-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 0 75%;
+}
+
+.vehicle-details-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex: 0 0 25%;
+}
+
+.alert {
+  color: red;
+}
+
+.warn {
+  color: orange;
+}
+
+.normal {
+  color: green;
+}
+
+.selected {
+  font-weight: bold;
+}

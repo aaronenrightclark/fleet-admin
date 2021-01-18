@@ -1,27 +1,35 @@
 # FleetAdmin
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
+Simple fleet tracking app using [@angular/google-maps](https://github.com/angular/components/tree/master/src/google-maps).
+
+This project was initially generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## Running unit tests (when fixed)
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## TODO
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- Styling of details component when rendered in map info window
+- Fix test configs (angular-cli generated configs have some issues...); add tests
 
-## Further help
+## Known Issues
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- FleetMapComponent cannot be destroyed and re-loaded as that imports the Google Map script multiple times. This
+  asdf
+
+## Author
+
+- Aaron Enright-Clark
+
+## License
+
+None

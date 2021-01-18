@@ -1,0 +1,26 @@
+<div class="admin-container">
+  <div class="header-container">
+    <h1>Fleet Admin</h1>
+    <h5>
+      Note: Map info window will not show until an initial map marker has been
+      clicked.
+    </h5>
+    <div class="content-toggles">
+      <button mat-raised-button (click)="showList = !showList">
+        Toggle Fleet List
+      </button>
+      <button mat-raised-button (click)="showMap = !showMap">
+        Toggle Fleet Map
+      </button>
+    </div>
+  </div>
+  <div class="content-container">
+    <app-fleet-list
+      *ngIf="showList"
+      (showOnMap)="showOnMap($event)"
+    ></app-fleet-list>
+    <app-fleet-map
+      [ngClass]="{ show: showMap, hide: !showMap }"
+    ></app-fleet-map>
+  </div>
+</div>

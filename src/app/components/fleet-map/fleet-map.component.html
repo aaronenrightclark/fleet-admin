@@ -1,0 +1,18 @@
+<div class="fleet-map-container" *ngIf="apiLoaded | async">
+  <google-map height="400px" width="750px" [center]="center" [zoom]="zoom">
+    <map-marker
+      #marker="mapMarker"
+      *ngFor="let markerPosition of markerPositions"
+      [position]="markerPosition"
+      (mapClick)="mapMarkerClicked(marker)"
+    ></map-marker>
+    <map-info-window
+      (domready)="subscribeSelected()"
+      (closeclick)="infoWindowClosed()"
+      ><app-vehicle-details
+        [vehicle]="selectedVehicle"
+        [mapView]="true"
+      ></app-vehicle-details>
+    </map-info-window>
+  </google-map>
+</div>

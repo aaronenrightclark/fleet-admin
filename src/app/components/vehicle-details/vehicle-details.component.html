@@ -1,0 +1,19 @@
+<mat-card
+  [ngClass]="{ selected: isSelected }"
+  class="vehicle-details-container"
+  *ngIf="vehicle"
+>
+  <div class="vehicle-details-content">
+    <div>ID: {{ vehicle.id }}</div>
+    <div>
+      Loc: ({{ vehicle.location.lat | number }},
+      {{ vehicle.location.lng | number }})
+    </div>
+    <div [ngClass]="fuelClass">Fuel: {{ vehicle.fuelLevel }}</div>
+  </div>
+  <div class="vehicle-details-actions" *ngIf="!mapView">
+    <button mat-icon-button alt="Show on Map" (click)="showOnMap.emit(vehicle)">
+      <mat-icon>map</mat-icon>
+    </button>
+  </div>
+</mat-card>

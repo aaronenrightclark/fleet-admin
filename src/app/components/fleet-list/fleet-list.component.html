@@ -1,0 +1,9 @@
+<div class="fleet-list-container">
+  <app-vehicle-details
+    class="fleet-list-card"
+    *ngFor="let vehicle of fleetVehicles$ | async"
+    [vehicle]="vehicle"
+    [isSelected]="vehicle.id === (selectedVehicle$ | async)?.id"
+    (showOnMap)="showOnMap.emit($event)"
+  ></app-vehicle-details>
+</div>
