@@ -23,8 +23,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Known Issues
 
-- FleetMapComponent cannot be destroyed and re-loaded as that imports the Google Map script multiple times. This
-  asdf
+- FleetMapComponent cannot be destroyed and re-loaded as that imports the Google Map script multiple times.
 
 ## Author
 
